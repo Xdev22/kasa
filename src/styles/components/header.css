@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap"); /********************   Header  *************************************/
+.kasa_logo__img {
+  width: 150px;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav i {
+  font-size: 28px;
+  color: #ff6060;
+  margin-left: 25px;
+  cursor: pointer;
+}
+nav img {
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ff6060;
+  border-bottom: 2px transparent solid;
+}
+nav ul li:hover {
+  border-bottom-color: #ff6060;
+}

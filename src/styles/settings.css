@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body a {
+  text-decoration: none;
+  color: #ff6060;
+}
+body a:visited {
+  color: #ff6060;
+}
+body ul {
+  list-style-type: none;
+}
+
+#block_page {
+  width: 80%;
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+}

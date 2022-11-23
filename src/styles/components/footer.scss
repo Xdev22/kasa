@@ -1,0 +1,26 @@
+/********************   FOOTER  *************************************/
+
+footer {
+  margin-top: 10px;
+  div {
+    padding: 40px 0 40px 0;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 150px;
+    cursor: pointer;
+  }
+  p {
+    margin-top: 10px;
+    color: white;
+    // font-size: 10px;
+  }
+  i {
+    font-size: 18px;
+  }
+}

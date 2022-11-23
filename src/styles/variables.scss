@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+//Font
+$font-Kasa: "Inter Tight", sans-serif;
+
+//Colors
+$color-primary: #ff6060;
+
+@mixin border-component {
+  border-radius: 20px 20px;
+}

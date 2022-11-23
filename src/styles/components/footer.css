@@ -1,0 +1,23 @@
+/********************   FOOTER  *************************************/
+footer {
+  margin-top: 10px;
+}
+footer div {
+  padding: 40px 0 40px 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer img {
+  width: 150px;
+  cursor: pointer;
+}
+footer p {
+  margin-top: 10px;
+  color: white;
+}
+footer i {
+  font-size: 18px;
+}

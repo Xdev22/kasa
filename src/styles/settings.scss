@@ -1,0 +1,36 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  a {
+    text-decoration: none;
+    color: $color-primary;
+
+    &:visited {
+      color: $color-primary;
+    }
+  }
+  ul {
+    list-style-type: none;
+  }
+}
+
+#block_page {
+  //   font-family: "Roboto", sans-serif;
+  // max-width: 70%;
+  width: 80%;
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+}
+
+// .letter_title_kasa {
+//   width: 50px;
+// }
