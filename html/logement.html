@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans maintenant. Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de la location d’appartements entre particuliers en France."
+    />
+    <link rel="icon" href="../assets/Vector.svg" />
+
+    <link rel="stylesheet" href="../Styles/index.css" />
+    <script
+      src="https://kit.fontawesome.com/b9f31f4e1e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Titre du logement</title>
+  </head>
+  <body>
+    <div id="block_page">
+      <header>
+        <div class="kasa_logo">
+          <img
+            class="kasa_logo__img"
+            src="../assets/kasa_logo.svg"
+            alt="logo de kasa"
+          />
+        </div>
+        <nav>
+          <ul>
+            <li>Accueil</li>
+            <li>A propos</li>
+          </ul>
+
+          <img src="../assets/random-user.png" alt="photo de profil" />
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Media logement -->
+        <div class="media_logement">
+          <img
+            class="media_logement__images"
+            src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
+            alt="photo du logement"
+          />
+          <div class="media_logement__arrows">
+            <img
+              class="media_logement-arrowLeft"
+              src="../assets/arrowLeft.svg"
+              alt="flèche gauche"
+            />
+            <img
+              class="media_logement-arrowRight"
+              src="../assets/arrowRight.svg"
+              alt="flèche droite"
+            />
+            <p class="media_logement__number">
+              <span class="media_logement__imageNumber">1</span>/<span
+                class="media_logement__imagesNumbers"
+                >4</span
+              >
+            </p>
+          </div>
+        </div>
+        <!-- Fiche logement -->
+        <div class="fiche_logement">
+          <div class="fiche_logement__header">
+            <!-- Contient le nom du logement, localisation, tags -->
+            <div class="fiche_logement__header__content1">
+              <h1 class="fiche_logement__header__content1__title">
+                Titre du logement
+              </h1>
+              <h2 class="fiche_logement__header__content1__location">
+                <span class="fiche_logement__header__content1__location-city"
+                  >Loca</span
+                >,
+                <span
+                  class="fiche_logement__header__content1__location-district"
+                  >Localisation</span
+                >
+              </h2>
+              <!-- tags -->
+              <div class="fiche_logement__header__content1__tags">
+                <ul>
+                  <li>Cozy</li>
+                  <li>Canal</li>
+                  <li>Paris 10</li>
+                </ul>
+              </div>
+            </div>
+            <div class="fiche_logement__header__content2">
+              <div class="fiche_logement__header__content2__stars">
+                <i class="fa-solid fa-star red"></i>
+                <i class="fa-solid fa-star red"></i>
+                <i class="fa-solid fa-star red"></i>
+                <i class="fa-solid fa-star red"></i>
+                <i class="fa-solid fa-star grey"></i>
+              </div>
+              <div class="fiche_logement__header__content2__user-infos">
+                <div class="fiche_logement__header__content2__user-infos__name">
+                  <p
+                    class="fiche_logement__header__content2__user-infos__firstname"
+                  >
+                    Rayan
+                  </p>
+                  <p
+                    class="fiche_logement__header__content2__user-infos__lastname"
+                  >
+                    Tounsi
+                  </p>
+                </div>
+                <img src="../assets/random-user.png" alt="Photo de profil" />
+              </div>
+            </div>
+          </div>
+          <!-- Details -->
+          <div class="fiche_logement__détails">
+            <section class="fiche_logement__description">
+              <div class="fiche_logement__détails-cat-description">
+                <p>Description</p>
+                <img src="../assets/arrow.svg" alt="flèche de defilement" />
+              </div>
+              <p class="fiche_logement__détails-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                eveniet fugiat, assumenda praesentium nesciunt iure delectus
+                totam quasi tempora doloremque accusamus fugit voluptatum
+                veritatis enim facere, facilis similique! Recusandae, dicta?
+              </p>
+            </section>
+            <section class="fiche_logement__equipements">
+              <div class="fiche_logement__détails-cat-equipements">
+                <p>Equipements</p>
+                <img src="../assets/arrow.svg" alt="flèche de defilement" />
+              </div>
+              <ul class="fiche_logement__détails-equipements">
+                <li>Climatisation</li>
+                <li>Climatisation</li>
+                <li>Climatisation</li>
+                <li>Climatisation</li>
+                <li>Climatisation</li>
+                <li>Climatisation</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div>
+          <img src="../assets/kasa_logo_white.svg" alt="" />
+          <p>
+            <i class="fa-regular fa-copyright"></i> 2020 Kasa. All rights
+            reserved
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
