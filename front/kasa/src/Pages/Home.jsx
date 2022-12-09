@@ -19,6 +19,7 @@ const home = () => {
               <NavLink
                 to={`/logement/${logement.id}`}
                 pictures={logement.pictures}
+                key={logement.id}
               >
                 <div
                   className="main_home__cards__card"

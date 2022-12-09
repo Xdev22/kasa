@@ -1,16 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const ErrorPage = () => {
+const ErrorPage = (props) => {
+  let errNum = props.err;
   return (
     <main>
-      <div class="error_page">
-        <p class="error_number">404</p>
-        <p class="error_message">
+      <div className="error_page">
+        <p className="error_number">{errNum}</p>
+        <p className="error_message">
           Oups! La page que vous demandez n'existe pas.
         </p>
         <NavLink to="/Home">
-          <p class="error_return">Retourner sur la page d'accueil</p>
+          <p className="error_return">Retourner sur la page d'accueil</p>
         </NavLink>
       </div>
     </main>

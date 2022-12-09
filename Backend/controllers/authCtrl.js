@@ -78,8 +78,9 @@ exports.signup = (req, res) => {
   //Promise pour recuperer le resultat de la verif du mdp
   let passwordCheked = Promise.resolve(passwordFunction(req.body.password));
   passwordCheked.then((obj) => {
+    console.log(obj);
     if (obj.Boolean === false) {
-      res.status(409).json(obj.message);
+      res.status(400).json(obj.message);
     } else {
       bcrypt
         .hash(obj.password, 10)
@@ -105,7 +106,7 @@ exports.signup = (req, res) => {
               // console.log(err);
               if (err.errors.hasOwnProperty("email")) {
                 // console.log("marche");
-                return res.status(409).json({
+                return res.status(400).json({
                   message: "Cette adresse mail est déjà utilisé.",
                 });
               } else {
@@ -122,7 +123,7 @@ exports.login = (req, res) => {
   User.findOne({ email: req.body.email } || { phone: [0 + phoneNumber] }).then(
     (user) => {
       if (!user) {
-        res.status(401).json({ message: "Utilisateur introuvable" });
+        res.status(404).json({ message: "Utilisateur introuvable" });
       } else {
         bcrypt.compare(req.body.password, user.password).then((valid) => {
           if (!valid) {
@@ -143,4 +144,12 @@ exports.logout = (req, res) => {
   res.cookie("jwt", "", { maxAge: 1 });
   res.status(200).json({ message: "User discounected" });
   res.redirect = "/";
+};
+
+exports.verifTokken = (req, res) => {
+  if (req.auth.userId) {
+    res.status(200).json(req.auth.userId);
+  } else {
+    throw "No token";
+  }
 };

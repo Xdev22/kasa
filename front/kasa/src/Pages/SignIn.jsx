@@ -9,11 +9,19 @@ const SignIn = () => {
   const [errMessage, setErrMessage] = useState("");
   const [errEmailInput, setErrEmailInput] = useState("");
   const [errPasswordInput, setErrPasswordInput] = useState("");
+  const [Navigate, SetNavigate] = useState(false);
+
   let [disabled, setDisabled] = useState(false);
 
   const [form, setForm] = useState({
     email: "",
     password: "",
+  });
+
+  useEffect(() => {
+    if (Navigate === true) {
+      <Navigate replace to={"/home"} />;
+    }
   });
 
   let handleLoginChange = (e) => {
@@ -60,7 +68,7 @@ const SignIn = () => {
       setErrMessage("");
       axios({
         method: "POST",
-        url: "http://localhost:8000/api/user/auth/login",
+        url: `${process.env.REACT_APP_URL_AUTH}/login`,
         withCredentials: true,
         data: {
           email: form.email,
@@ -70,8 +78,9 @@ const SignIn = () => {
         .then((res) => {
           // window.location = "/";
           console.log(res);
+          SetNavigate(true);
 
-          setForm([{ email: "", password: "" }]);
+          // setForm([{ email: "", password: "" }]);
         })
         .catch((err) => {
           let error = err.response.data.message;

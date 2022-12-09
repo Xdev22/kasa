@@ -1,14 +1,39 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink } from "react-router-dom";
+import cookie from "js-cookie";
+import axios from "axios";
+import Home from "../Pages/Home";
+
 import Data from "../Data/homes.json";
+import { UidContext } from "./AppContext";
 
 const Nav = () => {
-  const [loged, setLoged] = useState(false);
+  const uid = useContext(UidContext);
 
-  //Functions
-  const logout = () => {
-    //fonction se deconnecter
+  const [loged, setLoged] = useState();
+
+  useEffect(() => {
+    if (uid) {
+      setLoged(true);
+    }
+  }, [uid]);
+
+  const logout = async () => {
+    await axios({
+      method: "post",
+      url: `http://localhost:8000/api/user/auth/logout`,
+      withCredentials: true,
+    })
+      .then(() => {
+        cookie.remove("jwt", { expires: 1 });
+        // window.location = "/home";
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
     setLoged(false);
   };
 
@@ -26,12 +51,14 @@ const Nav = () => {
       {loged ? (
         <>
           <NavLink to="/profil">
-            <img src={Data[0].host.picture} alt="profil" />
+            <img src={Data[9].host.picture} alt="profil" />
           </NavLink>
-          <i
-            className="fa-solid fa-arrow-right-to-bracket"
-            onClick={logout}
-          ></i>
+          <NavLink to="/Home" replace={true}>
+            <i
+              className="fa-solid fa-arrow-right-to-bracket"
+              onClick={logout}
+            ></i>
+          </NavLink>
         </>
       ) : (
         // sinon

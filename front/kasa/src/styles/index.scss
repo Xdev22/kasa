@@ -311,6 +311,9 @@
 .errInput {
   background-color: red;
   border: 2px solid red;
+  &:selection {
+    background-color: red;
+  }
   // padding-left: 10px;
   // font-size: 20px;
   // border-radius: 10px;
